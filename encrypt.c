@@ -26,7 +26,7 @@ static int encrypt(const char *src, const char * dest, const char *key)
 	fpwrite = fopen(dest, "wb");
 	if (!fpwrite){
 		if (fpread){
-			fclse(fpread);
+			fclose(fpread);
 		}
 		printf("%s file open failure\n", dest);
 		return FAILURE;
